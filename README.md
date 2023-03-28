@@ -1,10 +1,12 @@
+<p align="right"><img src="https://github.com/isc-at/CPIPE/blob/master/archived.jpg"/></p>
+
 ## The Idea  
 The similarity between JSON objects + arrays and Globals in IRIS or Caché is evident.    
 With small and medium size JSON objects navigation across %Dynamic Objects is comfortable.  
 But with **large** and/or deep cascaded objects it becomes a challenge.   
 
 The presented tool offers 3 variants   
-- loading an already existing %Dyamic Object or Array into a global of your choice   
+- loading an already existing %Dynamic Object or Array into a global of your choice   
 - loading a %Stream containing a JSON object into a global of your choice   
 - loading an external File containing a JSON object into a global of your choice   
 
@@ -48,23 +50,9 @@ USER>write ##class(rcc.jstog).file(filename)  ; using default global ^json
 1
 USER>
 ```
-### Prerequisites
-Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
-
-### Installation 
-Clone/git pull the repo into any local directory
-```
-git https://github.com/rcemper/JSONfile-to-Global.git
-```
-Run the IRIS container with your project: 
-```
-docker-compose up -d --build
-```
 ## How to Test it
-log in to command line or use [Webterminal](http://localhost:42773/terminal/)   
-```
-docker-compose exec iris iris session iris
-```
+log in to command line or use a terminal session     
+
 2 test files are available   
 - /opt/irisbuild/src/data/demo.json  ~1kB     
 ![](https://community.intersystems.com/sites/default/files/inline/images/demo.jpg)  
@@ -83,7 +71,3 @@ USER ZWRITE ^json
 [Article in DC](https://community.intersystems.com/post/jsonfile-global-1)   
 
 [Video](https://youtu.be/rJ4hY7-5CRk)    
-
-[Online Demo](https://jsonfile-to-global.demo.community.intersystems.com/csp/sys/UtilHome.csp)   
-[Online Terminal](https://jsonfile-to-global.demo.community.intersystems.com/terminal/)   
-
